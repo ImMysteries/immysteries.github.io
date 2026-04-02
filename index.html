@@ -242,6 +242,15 @@
             setTimeout(createShootingStar, 2800);
         });
     </script>
+
+    <script>
+        fetch('https://api.counterapi.dev/v1/immysteries/home/up')
+        .then(response => response.json())
+        .then(data => {
+            console.log(`${data.count}`);
+        })
+        .catch(err => console.error('Counter failed to load:', err));
+    </script>
 </body>
 
 </html>
